@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4111F4B4-7F83-42B3-8E08-2BB69451A677}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EktronAPI</RootNamespace>
+    <AssemblyName>EktronAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CookieEncryption">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\CookieEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.ASM.EkDavProtocol, Version=4.0.0.0, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.ASM.EkDavProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.ASM.EkHttpDavHandler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.ASM.EkHttpDavHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.ASM.FileHandler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.ASM.FileHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.BusinessObjects.Caching, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.BusinessObjects.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Common, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Contracts, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework.UI, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework.UI.Controls, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework.UI.Controls.EktronUI, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.UI.Controls.EktronUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework.UI.Registration, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.UI.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Framework.UI.Services, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Framework.UI.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ektron.Cms.Instrumentation, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Mobile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.ObjectFactory, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Personalization, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Personalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Providers, Version=9.1.0.184, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Search, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Cms.Widget, Version=9.1.0.184, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Cms.Widget.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=1e97f90fc2b998db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=1e97f90fc2b998db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=1e97f90fc2b998db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Newtonsoft.json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Newtonsoft.json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Storage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=559a2c4fa21e63be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=1e97f90fc2b998db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Ektron.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=1e97f90fc2b998db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Ektron.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisualStudioGitIgnore">
+      <HintPath>..\packages\VisualStudioGitIgnore.1.3.0.0\lib\net40\VisualStudioGitIgnore.dll</HintPath>
+    </Reference>
+    <Reference Include="Wurfl">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Wurfl.dll</HintPath>
+    </Reference>
+    <Reference Include="Wurfl.Aspnet.Extensions">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Wurfl.Aspnet.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\..\..\Program Files (x86)\Ektron\CMS400v91\startersites\3TierMin\Content\bin\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonAPI.cs" />
+    <Compile Include="Configuration\EktronCredentials.cs" />
+    <Compile Include="Content\ContentAPI.cs" />
+    <Compile Include="Content\LibraryAPI.cs" />
+    <Compile Include="DummyInitializer.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Models\EktronToken.cs" />
+    <Compile Include="Organization\Folders.cs" />
+    <Compile Include="Organization\MenuAPI.cs" />
+    <Compile Include="Settings\UrlAliasing.cs" />
+    <Compile Include="Organization\Categories.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{305e0f75-c9eb-472a-b4df-5378a6e61f1d}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{122e203b-ba87-48f2-89c8-4843d3ec5df0}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{ce48882d-f0b8-4649-a201-4318f963a64a}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmlMapper\XmlMapper.csproj">
+      <Project>{024013d5-7762-489a-94f6-e054bded114b}</Project>
+      <Name>XmlMapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="git.ignore" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
