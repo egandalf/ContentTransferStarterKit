@@ -101,6 +101,10 @@ Note that it would be ideal to transfer images used by content as the content it
 
 Again, source and destination values are configured within `Program.cs`, similar to the above snippets.
 
+##External Dependencies
+
+1. This code currently relies on a REST API solution developed by Allan Thraen (@athraen on Twitter). You can download that source and nuget package at https://github.com/AThraen/ServiceAPIExtensions
+
 ##Limitations, aka Improvement Opportunities
 
 1. *Only `List<>` types are supported for deserialization*, not Arrays or other collections
