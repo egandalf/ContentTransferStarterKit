@@ -19,7 +19,7 @@ namespace AppTransferContentTree
         private static EPiContentAPI epAPI = new EPiContentAPI();
         private static EkMenuAPI menuAPI = new EkMenuAPI();
 
-        private static int LanguageId = 1033;
+        private static int LanguageId = Common.Configuration.LanguageId;
 
         static void Main(string[] args)
         {

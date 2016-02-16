@@ -21,7 +21,7 @@ namespace Business.Ektron
         {
             var dalAPI = new EktronAPI.Content.ContentAPI();
             return dalAPI.GetList<T>(SourceId, Common.Enumeration.ContentSourceType.Folder, 50, 1);
-            //return dalAPI.GetAll<T>(SourceId, Common.Enumeration.ContentSourceType.Folder, 1033);
+            //return dalAPI.GetAll<T>(SourceId, Common.Enumeration.ContentSourceType.Folder, Common.Configuration.LanguageId);
         }
     }
 }
