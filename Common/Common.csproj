@@ -42,7 +42,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
     <Compile Include="EktronDefinition.cs" />
     <Compile Include="EktronItemReference.cs" />
     <Compile Include="EktronRich.cs" />

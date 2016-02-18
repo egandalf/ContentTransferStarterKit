@@ -14,7 +14,7 @@ namespace Business.Ektron
         public MenuItem GetMenuTree(long RootId)
         {
             var menuApi = new MenuAPI();
-            return menuApi.GetMenuTree(RootId, Common.Configuration.LanguageId);
+            return menuApi.GetMenuTree(RootId, 1033);
         }
 
         public T GetMenuTree<T>(T RootNode)

@@ -2,7 +2,6 @@
 using Business.EPiServer;
 using Models;
 using System;
-using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +13,7 @@ namespace AppCopyFolderContent
     {
         private static EkContentAPI ekAPI = new EkContentAPI();
         private static EPiContentAPI epAPI = new EPiContentAPI();
-        private static int LanguageId = Common.Configuration.LanguageId;
+        private static int LanguageId = 1033;
 
         static void Main(string[] args)
         {

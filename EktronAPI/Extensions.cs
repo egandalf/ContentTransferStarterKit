@@ -14,7 +14,6 @@ namespace EktronAPI
     {
         public static T ToGenericContent<T>(this ContentData SourceContent) where T : GenericContent, new()
         {
-            // Check if SourceContent.MetaData is null before referencing ...
             var gc = new T()
             {
                 Name = SourceContent.Title,
@@ -23,19 +22,13 @@ namespace EktronAPI
                 IsPublished = SourceContent.IsPublished,
                 LanguageId = SourceContent.LanguageId,
                 PrimaryUrl = SourceContent.Quicklink,
-                MetaDescription = SourceContent.MetaData == null
-                    ? string.Empty
-                    : (from m in SourceContent.MetaData
+                MetaDescription = (from m in SourceContent.MetaData
                                        where m.Name.ToLower() == "description"
                                        select m.Text).DefaultIfEmpty(null).FirstOrDefault(),
-                MetaKeywords = SourceContent.MetaData == null
-                    ? new string[] { }
-                    : SplitKeywordString((from m in SourceContent.MetaData
+                MetaKeywords = SplitKeywordString((from m in SourceContent.MetaData
                                     where m.Name.ToLower() == "keywords"
                                     select m.Text).DefaultIfEmpty(null).FirstOrDefault()),
-                MetaTitle = SourceContent.MetaData == null
-                    ? string.Empty
-                    : (from m in SourceContent.MetaData
+                MetaTitle = (from m in SourceContent.MetaData
                                  where m.Name.ToLower() == "title"
                                  select m.Text).DefaultIfEmpty(SourceContent.Title).FirstOrDefault(),
                 ParentContentReference = null, // Coming from Ektron, there is no parent reference.

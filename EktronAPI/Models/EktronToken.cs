@@ -34,7 +34,7 @@ namespace EktronAPI.Models
             var Creds = GetEktronCredentials();
             Task<bool> t = new Task<bool>(() =>
             {
-                var token = CommonAPI.UserInstance_NoToken.Authenticate(Creds.Username, Creds.Password, Creds.BaseUrl);
+                var token = CommonAPI.UserInstance_NoToken.Authenticate(Creds.Username, Creds.Password);
                 if (!string.IsNullOrEmpty(token))
                 {
                     _token = token;
@@ -43,10 +43,7 @@ namespace EktronAPI.Models
                 return false;
             });
             t.Start();
-			// Never returns? Change to t.Wait()
-            //return await t;
-            var result = t.Wait(2000);  // wait up to 2 second
-            return t.Result;
+            return await t;
         }
 
         private static EktronCredentials GetEktronCredentials()
